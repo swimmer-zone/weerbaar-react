@@ -1,5 +1,5 @@
 import React from 'react';
-import Messages from './Layout/Messages';
+import Form from './Layout/Form';
 import './App.scss';
 
 const App = () => {
@@ -10,21 +10,6 @@ const App = () => {
 	  	return ~~((Date.now() - birthday) / (31557600000));
 	}
 
-	const years = [];
-	for (let i = (new Date().getFullYear() - 5); i >= (new Date().getFullYear() - 14); i--) {
-	    years.push(<option value={i} key={i}>{i}</option>);
-	}
-
-	const months = [];
-	for (let i = 1; i <= 12; i++) {
-	    months.push(<option value={i} key={i}>{i}</option>);
-	}
-
-	const days = [];
-	for (let i = 1; i <= 31; i++) {
-	    days.push(<option value={i} key={i}>{i}</option>)
-	}
-
   	return (
 		<>
 		  	<header>
@@ -32,7 +17,7 @@ const App = () => {
 				<h1>Weerbaar Worden</h1>
 				<p>Rots &amp; Watertraining voor jongens en meisjes</p>
 				<menu>
-					<li class="current"><a href="#welkom">Welkom</a></li>
+					<li className="current"><a href="#welkom">Welkom</a></li>
 					<li><a href="#rots_en_water">Rots &amp; Water</a></li>
 					<li><a href="#training">Training</a></li>
 					<li><a href="#aanmelden">Meld je aan</a></li>
@@ -98,69 +83,7 @@ const App = () => {
 					<fieldset>
 						<legend>Vul het formulier in</legend>
 
-						<Messages type="error" message="Fout!" />
-
-						<form method="post" action="/post">
-							<input type="hidden" name="project" value="weerbaar" />
-							<input type="hidden" name="fill_this" />
-
-							<label for="naam_a">Naam</label>
-							<input type="text" name="naam[]" id="naam_a" />
-							<input type="text" name="naam[]" id="naam_b" /><br />
-
-							<label for="adres_a">Adres</label>
-							<input type="text" name="adres[]" id="adres_a" />
-							<input type="text" name="adres[]" id="adres_b" /><br />
-
-							<label for="postcode_a">Postcode</label>
-							<input type="text" name="postcode[]" id="postcode_a" />
-							<input type="text" name="postcode[]" id="postcode_b" /><br />
-
-							<label for="woonplaats">Woonplaats</label>
-							<input type="text" name="woonplaats" id="woonplaats" /><br />
-
-							<label for="leeftijd_a">Geboortedatum</label>
-							<select name="leeftijd[]" id="leeftijd_a">
-								<option>Dag</option>
-								{days}
-							</select>
-							<select name="leeftijd[]" id="leeftijd_b">
-								<option>Maand</option>
-								{months}
-							</select>
-							<select name="leeftijd[]" id="leeftijd_c">
-								<option>Jaar</option>
-								{years}
-							</select><br />
-
-							<label for="email">E-mail</label>
-							<input type="email" name="email" id="email" /><br />
-
-							<label for="telefoon_a">Telefoon</label>
-							+31 <input type="text" name="telefoon[]" id="telefoon_a" />
-							<input type="text" name="telefoon[]" id="telefoon_b" /><br />
-
-							<label for="leerdoel">Leerdoel</label>
-							<select name="leerdoel" id="leerdoel">
-								<option>Selecteer...</option>
-								<option value="Zeggen wat je denkt en voelt">Zeggen wat je denkt en voelt</option>
-								<option value="Sterk staan">Sterk staan</option>
-								<option value="Solidariteit">Solidariteit</option>
-								<option value="Assertiviteit">Assertiviteit</option>
-								<option value="Weerbaar voor de brugklas">Weerbaar voor de brugklas</option>
-								<option value="Meer zelfvertrouwen">Meer zelfvertrouwen</option>
-								<option value="Meer zelfbeheersing">Meer zelfbeheersing</option>
-								<option value="Meer zelfreflectie">Meer zelfreflectie</option>
-								<option value="Grenzen aangeven">Grenzen aangeven</option>
-								<option value="Grenzen aanvoelen">Grenzen aanvoelen</option>
-								<option value="Zelfverdediging">Zelfverdediging</option>
-							</select><br />
-
-							<label for="vragen">Vragen / Opmerkingen</label>
-							<textarea name="vragen" id="vragen"></textarea><br />
-							
-							<input type="submit" value="Verstuur" />
-						</form>
+						<Form />
 					</fieldset>
 					<p className="footer">
 						<small>
