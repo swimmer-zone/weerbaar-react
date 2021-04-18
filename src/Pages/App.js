@@ -1,6 +1,6 @@
 import React from 'react';
-import Form from './Layout/Form';
-import './App.scss';
+import { Form } from '../Components';
+import '../assets/app.scss';
 
 const App = () => {
 	const birthday = '1986-03-01';

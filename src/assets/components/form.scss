@@ -1,0 +1,86 @@
+@import '../_variables.scss';
+
+label {
+    display: block;
+    width: 400px;
+    float: left;
+    color: $text;
+    padding: 8px;
+    text-align: justify;
+}
+
+input,
+select,
+textarea {
+    height: 40px;
+    background-color: rgba(255,255,255,0.95);
+    clear: left;
+    border: 0;
+    margin: 6px;
+    color: $text;
+    font-family: $font;
+    padding: 5px 8px;
+}
+
+textarea {
+    height: 120px;
+    width: 332px;
+}
+
+input {
+    &#naam_a,
+    &#naam_b,
+    &#leeftijd_c {
+        width: 150px;
+    }
+
+    &#adres_a {
+        width: 225px;
+    }
+
+    &#adres_b,
+    &#postcode_b,
+    &#telefoon_a {
+        width: 75px;
+    }
+
+    &#postcode_a {
+        width: 125px;
+    }
+
+    &#woonplaats,
+    &#email {
+        width: 332px;
+    }
+
+    &#telefoon_b {
+        width: 190px;
+    }
+}
+
+select {
+    &#leeftijd_a,
+    &#leeftijd_b {
+        width: 82px;
+    }
+
+    &#leeftijd_c {
+        width: 149px;
+    }
+    
+    &#leerdoel {
+        width: 348px;
+    }
+}
+
+input[type=submit] {
+    border: 0;
+    color: $white;
+    background-color: $text;
+    outline: 0;
+    font-family: $font;
+    font-size: 24px;
+    height: 32px;
+    width: 150px;
+    padding-bottom: 35px;
+}
