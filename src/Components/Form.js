@@ -11,6 +11,7 @@ const Form = () => {
     const SERVICE_ID = 'service_blackhole';
     const TEMPLATE_ID = 'template_weerbaar';
     const USER_ID = 'OzW6Cf4bvnry5FqIR';
+    const RECAPTCHA_KEY = '6LcsphcgAAAAAGPGnQsrFXEd0gcRUAz0fSwZq93u';
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -124,7 +125,9 @@ const Form = () => {
 
             <label htmlFor="vragen">Vragen / Opmerkingen</label>
             <textarea name="vragen" id="vragen"></textarea><br />
-            
+
+            <div class="g-recaptcha" data-sitekey={RECAPTCHA_KEY}></div>
+
             <input type="submit" value="Verstuur" />
             
             {mailSent && error.sent && <Messages type="success" message="Aanmelding verzonden!"/>}
