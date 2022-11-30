@@ -79,6 +79,17 @@ const App = () => {
 					<p>
 						Wil je meer informatie, stuur dan een e-mail naar <a href="mailto:weerbaar@swimmer.zone">weerbaar@swimmer.zone</a>.
 					</p>
+					<p className="footer">
+						<small>
+							Rots &amp; Water is een programma van het <a href="http://www.rotsenwater.nl">Rots &amp; Water Instituut NL</a>
+						</small>|
+						<small>
+							<a href="https://opendyslexic.org/">Open Dyslexic</a>
+						</small>|
+						<small>
+							&copy; <a href="http://swimmer.zone/">Swimmer</a> 2011 - {(new Date().getFullYear())}
+						</small>
+					</p>
 				</section>
 			</div>
 		</>
