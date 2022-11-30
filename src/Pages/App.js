@@ -20,7 +20,7 @@ const App = () => {
 					<li className="current"><a href="#welkom">Welkom</a></li>
 					<li><a href="#rots_en_water">Rots &amp; Water</a></li>
 					<li><a href="#training">Training</a></li>
-					<li><a href="#aanmelden">Meld je aan</a></li>
+					<li><a href="#aanmelden">Meer info</a></li>
 				</menu>
 			</header>
 			<div>
@@ -75,26 +75,9 @@ const App = () => {
 					</ul>
 				</section>
 				<section id="aanmelden">
-					<h2>Meld je aan</h2>
+					<h2>Meer info</h2>
 					<p>
-						Je kan je wensen vrijblijvend kenbaar maken via het onderstaande formulier. Je krijgt snel een reactie waarin je ge&iuml;nformeerd wordt over de laatste ontwikkelingen. Alle aanmeldingen worden verzameld en ingedeeld. Vervolgens stellen we (in overleg met de gegadigden) een agenda op. Er wordt een geschikte locatie bepaald en daarna volgt de mogelijkheid om de inschrijving definitief te maken.
-					</p>
-
-					<fieldset>
-						<legend>Vul het formulier in</legend>
-
-						<Form />
-					</fieldset>
-					<p className="footer">
-						<small>
-							Rots &amp; Water is een programma van het <a href="http://www.rotsenwater.nl">Rots &amp; Water Instituut NL</a>
-						</small>|
-						<small>
-							<a href="https://opendyslexic.org/">Open Dyslexic</a>
-						</small>|
-						<small>
-							&copy; <a href="http://swimmer.zone/">Swimmer</a> 2011 - {(new Date().getFullYear())}
-						</small>
+						Wil je meer informatie, stuur dan een e-mail naar <a href="mailto:weerbaar@swimmer.zone">weerbaar@swimmer.zone</a>.
 					</p>
 				</section>
 			</div>
